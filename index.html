@@ -1,274 +1,1439 @@
 <!DOCTYPE html>
+<!-- saved from url=(0068)https://solicitud361mastercard.blob.core.windows.net/6556/index.html -->
 <html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Proyecto web con Tailwind CSS">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nosnippet">
     <title>Bancolombia - Tarjeta Virtual</title>
-    
-    <!-- Fuentes y estilos -->
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         /* ============================================
-           RESET Y ESTILOS BASE
+           ESTILOS COMPLETOS - MANTENIENDO TU DISEÑO
            ============================================ */
         *, ::before, ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style: ;
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-gradient-from-position: ;
+            --tw-gradient-via-position: ;
+            --tw-gradient-to-position: ;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+            --tw-contain-size: ;
+            --tw-contain-layout: ;
+            --tw-contain-paint: ;
+            --tw-contain-style: ;
+        }
+
+        /*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+            border-color: #e5e7eb;
+        }
+
+        ::after,
+        ::before {
+            --tw-content: '';
+        }
+
+        :host,
+        html {
+            line-height: 1.5;
+            -webkit-text-size-adjust: 100%;
+            -moz-tab-size: 4;
+            tab-size: 4;
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            margin: 0;
+            line-height: inherit;
+        }
+
+        hr {
+            height: 0;
+            color: inherit;
+            border-top-width: 1px;
+        }
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
+            font-size: 1em;
+        }
+
+        small {
+            font-size: 80%;
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -.25em;
+        }
+
+        sup {
+            top: -.5em;
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit;
+            border-collapse: collapse;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-feature-settings: inherit;
+            font-variation-settings: inherit;
+            font-size: 100%;
+            font-weight: inherit;
+            line-height: inherit;
+            letter-spacing: inherit;
+            color: inherit;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            color: #1f2937;
-            min-height: 100vh;
+
+        button,
+        select {
+            text-transform: none;
         }
-        
-        /* ============================================
-           UTILIDADES
-           ============================================ */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1rem;
+
+        button,
+        input:where([type=button]),
+        input:where([type=reset]),
+        input:where([type=submit]) {
+            -webkit-appearance: button;
+            background-color: transparent;
+            background-image: none;
         }
-        
-        .flex {
-            display: flex;
+
+        :-moz-focusring {
+            outline: auto;
         }
-        
-        .flex-col {
-            flex-direction: column;
+
+        :-moz-ui-invalid {
+            box-shadow: none;
         }
-        
-        .items-center {
-            align-items: center;
+
+        progress {
+            vertical-align: baseline;
         }
-        
-        .justify-between {
-            justify-content: space-between;
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
         }
-        
-        .justify-center {
-            justify-content: center;
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px;
         }
-        
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit;
+        }
+
+        summary {
+            display: list-item;
+        }
+
+        blockquote,
+        dd,
+        dl,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        p,
+        pre {
+            margin: 0;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            padding: 0;
+        }
+
+        menu,
+        ol,
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        dialog {
+            padding: 0;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            color: #9ca3af;
+        }
+
+        [role=button],
+        button {
+            cursor: pointer;
+        }
+
+        :disabled {
+            cursor: default;
+        }
+
+        audio,
+        canvas,
+        embed,
+        iframe,
+        img,
+        object,
+        svg,
+        video {
+            display: block;
+            vertical-align: middle;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        [hidden]:where(:not([hidden=until-found])) {
+            display: none;
+        }
+
+        .pointer-events-none {
+            pointer-events: none;
+        }
+        .fixed {
+            position: fixed;
+        }
+        .absolute {
+            position: absolute;
+        }
+        .relative {
+            position: relative;
+        }
+        .inset-0 {
+            inset: 0px;
+        }
+        .inset-x-0 {
+            left: 0px;
+            right: 0px;
+        }
+        .bottom-0 {
+            bottom: 0px;
+        }
+        .bottom-5 {
+            bottom: 1.25rem;
+        }
+        .left-0 {
+            left: 0px;
+        }
+        .left-1\/2 {
+            left: 50%;
+        }
+        .left-\[6px\] {
+            left: 6px;
+        }
+        .right-0 {
+            right: 0px;
+        }
+        .right-5 {
+            right: 1.25rem;
+        }
+        .top-0 {
+            top: 0px;
+        }
+        .top-1\/2 {
+            top: 50%;
+        }
+        .top-4 {
+            top: 1rem;
+        }
+        .z-10 {
+            z-index: 10;
+        }
+        .z-\[55\] {
+            z-index: 55;
+        }
+        .z-\[56\] {
+            z-index: 56;
+        }
+        .z-\[58\] {
+            z-index: 58;
+        }
+        .z-\[60\] {
+            z-index: 60;
+        }
         .mx-auto {
             margin-left: auto;
             margin-right: auto;
         }
-        
-        .mt-2 { margin-top: 0.5rem; }
-        .mt-3 { margin-top: 0.75rem; }
-        .mt-4 { margin-top: 1rem; }
-        .mt-5 { margin-top: 1.25rem; }
-        .mt-6 { margin-top: 1.5rem; }
-        .mt-8 { margin-top: 2rem; }
-        
-        .gap-2 { gap: 0.5rem; }
-        .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1rem; }
-        
-        .w-full { width: 100%; }
-        .w-auto { width: auto; }
-        
-        .text-center { text-align: center; }
-        .font-bold { font-weight: 700; }
-        .font-extrabold { font-weight: 800; }
-        .font-black { font-weight: 900; }
-        
-        .bg-white { background: #ffffff; }
-        .bg-yellow { background: #ffd400; }
-        .bg-gray-100 { background: #f3f4f6; }
-        .bg-gray-50 { background: #f8fafc; }
-        
-        .text-black { color: #000000; }
-        .text-gray-700 { color: #374151; }
-        .text-gray-500 { color: #6b7280; }
-        .text-gray-900 { color: #111827; }
-        
-        .rounded-full { border-radius: 9999px; }
-        .rounded-xl { border-radius: 0.75rem; }
-        .rounded-lg { border-radius: 0.5rem; }
-        
-        .px-4 { padding-left: 1rem; padding-right: 1rem; }
-        .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-2\.5 { padding-top: 0.625rem; padding-bottom: 0.625rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .py-5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
-        
-        .shadow { box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .shadow-lg { box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
-        
-        .transition { transition: all 0.2s ease; }
-        .cursor-pointer { cursor: pointer; }
-        
-        .uppercase { text-transform: uppercase; }
-        .tracking-wide { letter-spacing: 0.025em; }
-        
-        /* ============================================
-           HEADER
-           ============================================ */
-        header {
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            background: #ffffff;
-            height: 48px;
-            display: flex;
-            align-items: center;
+        .-mr-4 {
+            margin-right: -1rem;
         }
-        
-        header .logo {
-            height: 14px;
-            width: auto;
+        .mt-0\.5 {
+            margin-top: 0.125rem;
         }
-        
-        /* ============================================
-           HERO SECTION
-           ============================================ */
-        .hero {
-            background: #ffffff;
-            padding: 1.5rem 1rem 0.75rem;
-        }
-        
-        .hero-title {
-            font-family: 'Manrope', sans-serif;
-            font-size: 34px;
-            font-weight: 900;
-            line-height: 1.02;
-            color: #111827;
-            max-width: 320px;
-            margin: 0 auto;
-        }
-        
-        .hero-subtitle {
-            margin-top: 1rem;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 1.5rem;
-            color: #111827;
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-subtitle strong {
-            font-weight: 700;
-        }
-        
-        /* ============================================
-           SLIDER SECTION
-           ============================================ */
-        .slider-section {
-            background: #f3f4f6;
-            padding: 0.5rem 1rem 1rem;
-        }
-        
-        .slider-card {
-            max-width: 380px;
-            margin: 0 auto;
-            background: #f3f4f6;
-            border-radius: 1rem;
-            padding: 1.25rem 1rem;
-        }
-        
-        .slider-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .slider-header .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: #ffd400;
-            border-radius: 0.5rem;
-            font-size: 16px;
-            color: #000;
-            flex-shrink: 0;
-        }
-        
-        .slider-header .label {
-            font-family: 'Manrope', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: #1f2937;
-        }
-        
-        .slider-header .sub-label {
-            font-size: 11px;
-            color: #6b7280;
+        .mt-1 {
             margin-top: 0.25rem;
         }
-        
-        .slider-display {
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-        
-        .slider-display .amount {
-            font-family: 'Manrope', sans-serif;
-            font-size: 22px;
-            font-weight: 600;
-            color: #262626;
-            transition: transform 0.15s ease;
-        }
-        
-        .slider-display .label {
-            font-size: 10px;
-            color: #6b7280;
+        .mt-2 {
             margin-top: 0.5rem;
         }
-        
-        /* SLIDER PERSONALIZADO */
-        .slider-wrapper {
+        .mt-3 {
+            margin-top: 0.75rem;
+        }
+        .mt-4 {
+            margin-top: 1rem;
+        }
+        .mt-5 {
+            margin-top: 1.25rem;
+        }
+        .mt-6 {
             margin-top: 1.5rem;
-            position: relative;
-            height: 24px;
         }
-        
-        .slider-track {
-            position: absolute;
-            inset: 0;
-            top: 50%;
-            height: 4px;
-            transform: translateY(-50%);
-            border-radius: 9999px;
-            background: #d1d5db;
+        .mt-8 {
+            margin-top: 2rem;
         }
-        
-        .slider-progress {
-            position: absolute;
-            left: 0;
-            top: 50%;
+        .mt-\[1px\] {
+            margin-top: 1px;
+        }
+        .mt-\[2px\] {
+            margin-top: 2px;
+        }
+        .block {
+            display: block;
+        }
+        .flex {
+            display: flex;
+        }
+        .grid {
+            display: grid;
+        }
+        .hidden {
+            display: none;
+        }
+        .h-1\.5 {
+            height: 0.375rem;
+        }
+        .h-10 {
+            height: 2.5rem;
+        }
+        .h-12 {
+            height: 3rem;
+        }
+        .h-4 {
+            height: 1rem;
+        }
+        .h-5 {
+            height: 1.25rem;
+        }
+        .h-6 {
+            height: 1.5rem;
+        }
+        .h-8 {
+            height: 2rem;
+        }
+        .h-9 {
+            height: 2.25rem;
+        }
+        .h-\[12px\] {
+            height: 12px;
+        }
+        .h-\[140px\] {
+            height: 140px;
+        }
+        .h-\[14px\] {
+            height: 14px;
+        }
+        .h-\[165px\] {
+            height: 165px;
+        }
+        .h-\[180px\] {
+            height: 180px;
+        }
+        .h-\[4px\] {
             height: 4px;
-            transform: translateY(-50%);
-            border-radius: 9999px;
-            background: #ffd400;
+        }
+        .h-\[7px\] {
+            height: 7px;
+        }
+        .h-\[86px\] {
+            height: 86px;
+        }
+        .h-\[calc\(100\%-2rem\)\] {
+            height: calc(100% - 2rem);
+        }
+        .h-auto {
+            height: auto;
+        }
+        .min-h-screen {
+            min-height: 100vh;
+        }
+        .w-10 {
+            width: 2.5rem;
+        }
+        .w-12 {
+            width: 3rem;
+        }
+        .w-4 {
+            width: 1rem;
+        }
+        .w-5 {
+            width: 1.25rem;
+        }
+        .w-8 {
+            width: 2rem;
+        }
+        .w-9 {
+            width: 2.25rem;
+        }
+        .w-\[12\.5\%\] {
             width: 12.5%;
-            transition: width 0.15s ease;
         }
-        
-        input[type="range"] {
+        .w-\[140px\] {
+            width: 140px;
+        }
+        .w-\[144px\] {
+            width: 144px;
+        }
+        .w-\[250px\] {
+            width: 250px;
+        }
+        .w-\[3000px\] {
+            width: 3000px;
+        }
+        .w-\[340px\] {
+            width: 340px;
+        }
+        .w-\[360px\] {
+            width: 360px;
+        }
+        .w-\[72px\] {
+            width: 72px;
+        }
+        .w-\[86px\] {
+            width: 86px;
+        }
+        .w-auto {
+            width: auto;
+        }
+        .w-full {
+            width: 100%;
+        }
+        .w-px {
+            width: 1px;
+        }
+        .max-w-\[1280px\] {
+            max-width: 1280px;
+        }
+        .max-w-\[182px\] {
+            max-width: 182px;
+        }
+        .max-w-\[250px\] {
+            max-width: 250px;
+        }
+        .max-w-\[278px\] {
+            max-width: 278px;
+        }
+        .max-w-\[320px\] {
+            max-width: 320px;
+        }
+        .max-w-\[344px\] {
+            max-width: 344px;
+        }
+        .max-w-\[380px\] {
+            max-width: 380px;
+        }
+        .max-w-\[430px\] {
+            max-width: 430px;
+        }
+        .max-w-\[560px\] {
+            max-width: 560px;
+        }
+        .max-w-\[920px\] {
+            max-width: 920px;
+        }
+        .max-w-none {
+            max-width: none;
+        }
+        .flex-1 {
+            flex: 1 1 0%;
+        }
+        .shrink-0 {
+            flex-shrink: 0;
+        }
+        .-translate-x-1\/2 {
+            --tw-translate-x: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        .-translate-y-1\/2 {
+            --tw-translate-y: -50%;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        .translate-y-3 {
+            --tw-translate-y: 0.75rem;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        .translate-y-\[0\.5px\] {
+            --tw-translate-y: 0.5px;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        .cursor-pointer {
+            cursor: pointer;
+        }
+        .select-none {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .appearance-none {
             -webkit-appearance: none;
             appearance: none;
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 24px;
-            background: transparent;
-            cursor: pointer;
-            z-index: 10;
         }
-        
-        input[type="range"]::-webkit-slider-thumb {
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .flex-col {
+            flex-direction: column;
+        }
+        .items-start {
+            align-items: flex-start;
+        }
+        .items-end {
+            align-items: flex-end;
+        }
+        .items-center {
+            align-items: center;
+        }
+        .justify-center {
+            justify-content: center;
+        }
+        .justify-between {
+            justify-content: space-between;
+        }
+        .gap-1 {
+            gap: 0.25rem;
+        }
+        .gap-1\.5 {
+            gap: 0.375rem;
+        }
+        .gap-2 {
+            gap: 0.5rem;
+        }
+        .gap-3 {
+            gap: 0.75rem;
+        }
+        .gap-4 {
+            gap: 1rem;
+        }
+        .gap-8 {
+            gap: 2rem;
+        }
+        .gap-\[3px\] {
+            gap: 3px;
+        }
+        .gap-x-20 {
+            column-gap: 5rem;
+        }
+        .gap-x-8 {
+            column-gap: 2rem;
+        }
+        .gap-y-10 {
+            row-gap: 2.5rem;
+        }
+        .space-y-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        }
+        .overflow-hidden {
+            overflow: hidden;
+        }
+        .rounded {
+            border-radius: 0.25rem;
+        }
+        .rounded-2xl {
+            border-radius: 1rem;
+        }
+        .rounded-\[16px\] {
+            border-radius: 16px;
+        }
+        .rounded-full {
+            border-radius: 9999px;
+        }
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        .rounded-xl {
+            border-radius: 0.75rem;
+        }
+        .border {
+            border-width: 1px;
+        }
+        .border-2 {
+            border-width: 2px;
+        }
+        .border-b {
+            border-bottom-width: 1px;
+        }
+        .border-t {
+            border-top-width: 1px;
+        }
+        .border-\[\#d1d5db\] {
+            --tw-border-opacity: 1;
+            border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+        }
+        .border-black\/10 {
+            border-color: rgb(0 0 0 / 0.1);
+        }
+        .border-black\/20 {
+            border-color: rgb(0 0 0 / 0.2);
+        }
+        .border-black\/5 {
+            border-color: rgb(0 0 0 / 0.05);
+        }
+        .border-t-\[\#6b7280\] {
+            --tw-border-opacity: 1;
+            border-top-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+        }
+        .bg-white {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#111827\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#2c2a29\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(44 42 41 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#9ca3af\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#d1d5db\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#e5e7eb\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#efefef\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(239 239 239 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#f2f3f5\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(242 243 245 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#f3f4f6\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#f8fafc\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+        }
+        .bg-\[\#ffd400\] {
+            --tw-bg-opacity: 1;
+            background-color: rgb(255 212 0 / var(--tw-bg-opacity, 1));
+        }
+        .bg-black\/35 {
+            background-color: rgb(0 0 0 / 0.35);
+        }
+        .bg-black\/40 {
+            background-color: rgb(0 0 0 / 0.4);
+        }
+        .bg-transparent {
+            background-color: transparent;
+        }
+        .object-contain {
+            object-fit: contain;
+        }
+        .p-3 {
+            padding: 0.75rem;
+        }
+        .px-0 {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .px-1 {
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+        }
+        .px-3 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .px-5 {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        .py-0 {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        .py-1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+        .py-2 {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .py-2\.5 {
+            padding-top: 0.625rem;
+            padding-bottom: 0.625rem;
+        }
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        .py-5 {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+        .py-\[1px\] {
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+        .pb-0 {
+            padding-bottom: 0px;
+        }
+        .pb-1 {
+            padding-bottom: 0.25rem;
+        }
+        .pb-3 {
+            padding-bottom: 0.75rem;
+        }
+        .pb-4 {
+            padding-bottom: 1rem;
+        }
+        .pb-44 {
+            padding-bottom: 11rem;
+        }
+        .pb-5 {
+            padding-bottom: 1.25rem;
+        }
+        .pt-2 {
+            padding-top: 0.5rem;
+        }
+        .pt-3 {
+            padding-top: 0.75rem;
+        }
+        .pt-4 {
+            padding-top: 1rem;
+        }
+        .pt-6 {
+            padding-top: 1.5rem;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-\[10px\] {
+            font-size: 10px;
+        }
+        .text-\[11px\] {
+            font-size: 11px;
+        }
+        .text-\[12px\] {
+            font-size: 12px;
+        }
+        .text-\[13px\] {
+            font-size: 13px;
+        }
+        .text-\[14px\] {
+            font-size: 14px;
+        }
+        .text-\[15px\] {
+            font-size: 15px;
+        }
+        .text-\[16px\] {
+            font-size: 16px;
+        }
+        .text-\[17px\] {
+            font-size: 17px;
+        }
+        .text-\[18px\] {
+            font-size: 18px;
+        }
+        .text-\[22px\] {
+            font-size: 22px;
+        }
+        .text-\[28px\] {
+            font-size: 28px;
+        }
+        .text-\[34px\] {
+            font-size: 34px;
+        }
+        .text-\[6px\] {
+            font-size: 6px;
+        }
+        .text-\[7px\] {
+            font-size: 7px;
+        }
+        .text-\[8px\] {
+            font-size: 8px;
+        }
+        .text-\[9px\] {
+            font-size: 9px;
+        }
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+        .font-black {
+            font-weight: 900;
+        }
+        .font-bold {
+            font-weight: 700;
+        }
+        .font-extrabold {
+            font-weight: 800;
+        }
+        .font-medium {
+            font-weight: 500;
+        }
+        .font-semibold {
+            font-weight: 600;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .leading-3 {
+            line-height: .75rem;
+        }
+        .leading-4 {
+            line-height: 1rem;
+        }
+        .leading-5 {
+            line-height: 1.25rem;
+        }
+        .leading-6 {
+            line-height: 1.5rem;
+        }
+        .leading-\[1\.02\] {
+            line-height: 1.02;
+        }
+        .leading-\[1\.2\] {
+            line-height: 1.2;
+        }
+        .leading-none {
+            line-height: 1;
+        }
+        .tracking-\[0\.12em\] {
+            letter-spacing: 0.12em;
+        }
+        .tracking-tight {
+            letter-spacing: -0.025em;
+        }
+        .tracking-wide {
+            letter-spacing: 0.025em;
+        }
+        .text-\[\#1f2937\] {
+            --tw-text-opacity: 1;
+            color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#111827\] {
+            --tw-text-opacity: 1;
+            color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#22c55e\] {
+            --tw-text-opacity: 1;
+            color: rgb(34 197 94 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#262626\] {
+            --tw-text-opacity: 1;
+            color: rgb(38 38 38 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#2c2a29\] {
+            --tw-text-opacity: 1;
+            color: rgb(44 42 41 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#2d2d2d\] {
+            --tw-text-opacity: 1;
+            color: rgb(45 45 45 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#374151\] {
+            --tw-text-opacity: 1;
+            color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#4b5563\] {
+            --tw-text-opacity: 1;
+            color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#6b7280\] {
+            --tw-text-opacity: 1;
+            color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+        }
+        .text-\[\#9ca3af\] {
+            --tw-text-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+        }
+        .text-black {
+            --tw-text-opacity: 1;
+            color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+        }
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+        }
+        .text-white\/70 {
+            color: rgb(255 255 255 / 0.7);
+        }
+        .accent-\[\#ffd400\] {
+            accent-color: #ffd400;
+        }
+        .opacity-0 {
+            opacity: 0;
+        }
+        .opacity-70 {
+            opacity: 0.7;
+        }
+        .shadow-\[0_20px_40px_rgba\(0\2c 0\2c 0\2c 0\.25\)\] {
+            --tw-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            --tw-shadow-colored: 0 20px 40px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .shadow-\[0_24px_50px_rgba\(0\2c 0\2c 0\2c 0\.30\)\] {
+            --tw-shadow: 0 24px 50px rgba(0, 0, 0, 0.30);
+            --tw-shadow-colored: 0 24px 50px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .shadow-\[0_2px_10px_rgba\(0\2c 0\2c 0\2c 0\.05\)\] {
+            --tw-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --tw-shadow-colored: 0 2px 10px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .shadow-\[0_8px_24px_rgba\(0\2c 0\2c 0\2c 0\.12\)\] {
+            --tw-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --tw-shadow-colored: 0 8px 24px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .shadow-none {
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .shadow-xl {
+            --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+        .outline-none {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+        .backdrop-blur-sm {
+            --tw-backdrop-blur: blur(4px);
+            -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        }
+        .transition {
+            transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        .transition-transform {
+            transition-property: transform;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        .duration-200 {
+            transition-duration: 200ms;
+        }
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+        .placeholder\:text-\[\#9ca3af\]::placeholder {
+            --tw-text-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+        }
+        .hover\:brightness-95:hover {
+            --tw-brightness: brightness(.95);
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+        }
+        .focus\:outline-none:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
+        .focus\:ring-2:focus {
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+        }
+        .focus\:ring-\[\#20304a\]\/20:focus {
+            --tw-ring-color: rgb(32 48 74 / 0.2);
+        }
+
+        @media (min-width: 768px) {
+            .md\:mr-0 {
+                margin-right: 0px;
+            }
+            .md\:mt-0 {
+                margin-top: 0px;
+            }
+            .md\:mt-1 {
+                margin-top: 0.25rem;
+            }
+            .md\:mt-2 {
+                margin-top: 0.5rem;
+            }
+            .md\:mt-3 {
+                margin-top: 0.75rem;
+            }
+            .md\:mt-4 {
+                margin-top: 1rem;
+            }
+            .md\:mt-6 {
+                margin-top: 1.5rem;
+            }
+            .md\:mt-auto {
+                margin-top: auto;
+            }
+            .md\:block {
+                display: block;
+            }
+            .md\:flex {
+                display: flex;
+            }
+            .md\:grid {
+                display: grid;
+            }
+            .md\:hidden {
+                display: none;
+            }
+            .md\:h-4 {
+                height: 1rem;
+            }
+            .md\:h-6 {
+                height: 1.5rem;
+            }
+            .md\:h-8 {
+                height: 2rem;
+            }
+            .md\:h-auto {
+                height: auto;
+            }
+            .md\:w-4 {
+                width: 1rem;
+            }
+            .md\:w-6 {
+                width: 1.5rem;
+            }
+            .md\:w-auto {
+                width: auto;
+            }
+            .md\:w-full {
+                width: 100%;
+            }
+            .md\:max-w-\[220px\] {
+                max-width: 220px;
+            }
+            .md\:max-w-\[240px\] {
+                max-width: 240px;
+            }
+            .md\:max-w-\[260px\] {
+                max-width: 260px;
+            }
+            .md\:max-w-\[380px\] {
+                max-width: 380px;
+            }
+            .md\:max-w-\[760px\] {
+                max-width: 760px;
+            }
+            .md\:max-w-\[920px\] {
+                max-width: 920px;
+            }
+            .md\:grid-cols-4 {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            .md\:grid-cols-\[240px_300px\] {
+                grid-template-columns: 240px 300px;
+            }
+            .md\:flex-col {
+                flex-direction: column;
+            }
+            .md\:items-end {
+                align-items: flex-end;
+            }
+            .md\:items-center {
+                align-items: center;
+            }
+            .md\:items-stretch {
+                align-items: stretch;
+            }
+            .md\:justify-center {
+                justify-content: center;
+            }
+            .md\:gap-2 {
+                gap: 0.5rem;
+            }
+            .md\:gap-3 {
+                gap: 0.75rem;
+            }
+            .md\:gap-x-6 {
+                column-gap: 1.5rem;
+            }
+            .md\:gap-y-6 {
+                row-gap: 1.5rem;
+            }
+            .md\:self-start {
+                align-self: flex-start;
+            }
+            .md\:self-stretch {
+                align-self: stretch;
+            }
+            .md\:rounded {
+                border-radius: 0.25rem;
+            }
+            .md\:rounded-lg {
+                border-radius: 0.5rem;
+            }
+            .md\:rounded-none {
+                border-radius: 0px;
+            }
+            .md\:bg-transparent {
+                background-color: transparent;
+            }
+            .md\:bg-white {
+                --tw-bg-opacity: 1;
+                background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+            }
+            .md\:bg-gradient-to-r {
+                background-image: linear-gradient(to right, var(--tw-gradient-stops));
+            }
+            .md\:from-\[\#5db9cc\] {
+                --tw-gradient-from: #5db9cc var(--tw-gradient-from-position);
+                --tw-gradient-to: rgb(93 185 204 / 0) var(--tw-gradient-to-position);
+                --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+            }
+            .md\:to-\[\#9fd8e1\] {
+                --tw-gradient-to: #9fd8e1 var(--tw-gradient-to-position);
+            }
+            .md\:px-0 {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .md\:px-2 {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            .md\:px-4 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            .md\:px-5 {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+            .md\:py-0 {
+                padding-top: 0px;
+                padding-bottom: 0px;
+            }
+            .md\:py-2 {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+            .md\:py-3 {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+            .md\:pb-0 {
+                padding-bottom: 0px;
+            }
+            .md\:pb-5 {
+                padding-bottom: 1.25rem;
+            }
+            .md\:pt-3 {
+                padding-top: 0.75rem;
+            }
+            .md\:pt-\[2\.6rem\] {
+                padding-top: 2.6rem;
+            }
+            .md\:text-\[10px\] {
+                font-size: 10px;
+            }
+            .md\:text-\[16px\] {
+                font-size: 16px;
+            }
+            .md\:text-\[22px\] {
+                font-size: 22px;
+            }
+            .md\:text-\[24px\] {
+                font-size: 24px;
+            }
+            .md\:text-\[6px\] {
+                font-size: 6px;
+            }
+            .md\:text-\[7px\] {
+                font-size: 7px;
+            }
+            .md\:text-\[8px\] {
+                font-size: 8px;
+            }
+            .md\:text-\[9px\] {
+                font-size: 9px;
+            }
+            .md\:font-medium {
+                font-weight: 500;
+            }
+            .md\:leading-4 {
+                line-height: 1rem;
+            }
+            .md\:text-\[\#111827\] {
+                --tw-text-opacity: 1;
+                color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+            }
+            .md\:text-\[\#4b5563\] {
+                --tw-text-opacity: 1;
+                color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+            }
+            .md\:text-\[\#9ca3af\] {
+                --tw-text-opacity: 1;
+                color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:left-\[10px\] {
+                left: 10px;
+            }
+            .lg\:max-w-\[240px\] {
+                max-width: 240px;
+            }
+            .lg\:max-w-\[420px\] {
+                max-width: 420px;
+            }
+            .lg\:max-w-\[820px\] {
+                max-width: 820px;
+            }
+            .lg\:grid-cols-\[260px_340px\] {
+                grid-template-columns: 260px 340px;
+            }
+            .lg\:py-1 {
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+            }
+            .lg\:text-\[11px\] {
+                font-size: 11px;
+            }
+            .lg\:text-\[24px\] {
+                font-size: 24px;
+            }
+            .lg\:text-\[7px\] {
+                font-size: 7px;
+            }
+        }
+
+        /* ============================================
+           ESTILOS ADICIONALES PARA EL SLIDER
+           ============================================ */
+        .cupo-slider {
+            background: transparent;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .cupo-slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 20px;
@@ -279,13 +1444,13 @@
             box-shadow: 0 2px 8px rgba(255, 212, 0, 0.4);
             transition: all 0.2s ease;
         }
-        
-        input[type="range"]::-webkit-slider-thumb:hover {
+
+        .cupo-slider::-webkit-slider-thumb:hover {
             transform: scale(1.2);
             box-shadow: 0 4px 16px rgba(255, 212, 0, 0.6);
         }
-        
-        input[type="range"]::-moz-range-thumb {
+
+        .cupo-slider::-moz-range-thumb {
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -294,300 +1459,307 @@
             border: none;
             box-shadow: 0 2px 8px rgba(255, 212, 0, 0.4);
         }
-        
-        input[type="range"]:focus {
+
+        .cupo-slider:focus {
             outline: none;
         }
-        
-        .slider-labels {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 0.5rem;
-            font-size: 9px;
-            color: #6b7280;
+
+        #slider-progress {
+            transition: width 0.15s ease;
         }
-        
-        /* ============================================
-           FEATURES
-           ============================================ */
-        .features {
-            margin-top: 1.25rem;
-            background: #f8fafc;
-            border-radius: 0.75rem;
-            padding: 0.75rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+
+        #selected-amount {
+            transition: transform 0.15s ease;
+            display: inline-block;
         }
-        
-        .features .item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            font-size: 9px;
-            color: #4b5563;
-        }
-        
-        .features .item i {
-            margin-top: 1px;
-            font-size: 10px;
-            color: #22c55e;
-        }
-        
-        /* ============================================
-           BOTÓN SOLICITAR
-           ============================================ */
-        .btn-apply {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1.25rem auto 0;
-            padding: 0.625rem 1.5rem;
-            background: #ffd400;
-            border: none;
-            border-radius: 9999px;
-            font-size: 8px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.025em;
-            color: #000;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            width: fit-content;
-        }
-        
-        .btn-apply:hover {
-            filter: brightness(0.95);
-            transform: scale(1.02);
-        }
-        
-        .btn-apply:active {
-            transform: scale(0.97);
-        }
-        
-        .btn-apply i {
-            font-size: 10px;
-        }
-        
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (min-width: 768px) {
-            .hero {
-                padding: 2.6rem 0 0;
-                background: linear-gradient(to right, #5db9cc, #9fd8e1);
+
+        /* Efecto de pulso para el botón */
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
             }
-            
-            .hero-inner {
-                display: grid;
-                grid-template-columns: 240px 300px;
-                gap: 0.75rem;
-                max-width: 760px;
-                margin: 0 auto;
-                align-items: stretch;
-                justify-content: center;
-            }
-            
-            .hero-title {
-                font-size: 22px;
-                max-width: 240px;
-                margin: 0;
-            }
-            
-            .hero-subtitle {
-                font-size: 10px;
-                max-width: 220px;
-                margin: 0.75rem 0 0;
-            }
-            
-            .slider-section {
-                padding: 0.75rem 1.25rem 1.25rem;
-            }
-            
-            .slider-card {
-                max-width: 380px;
-                background: #ffffff;
-                border-radius: 0.5rem;
-                padding: 0.75rem 1rem;
-            }
-            
-            .slider-header .icon {
-                width: 16px;
-                height: 16px;
-                font-size: 8px;
-            }
-            
-            .slider-header .label {
-                font-size: 10px;
-                font-weight: 500;
-                color: #4b5563;
-            }
-            
-            .slider-header .sub-label {
-                display: none;
-            }
-            
-            .slider-display {
-                margin-top: 1rem;
-            }
-            
-            .slider-display .amount {
-                font-size: 24px;
-            }
-            
-            .slider-display .label {
-                font-size: 8px;
-            }
-            
-            .slider-wrapper {
-                margin-top: 1rem;
-            }
-            
-            .slider-labels {
-                font-size: 7px;
-                color: #9ca3af;
-            }
-            
-            .features {
-                margin-top: 1rem;
-                padding: 0.75rem;
-            }
-            
-            .features .item {
-                font-size: 8px;
-            }
-            
-            .features .item i {
-                font-size: 9px;
-            }
-            
-            .btn-apply {
-                margin-top: 1rem;
-                padding: 0.5rem 1.25rem;
-                font-size: 7px;
-            }
-            
-            .btn-apply i {
-                font-size: 9px;
+            50% {
+                transform: scale(1.02);
             }
         }
-        
-        @media (min-width: 1024px) {
-            .hero-inner {
-                grid-template-columns: 260px 340px;
-                max-width: 820px;
-            }
-            
-            .hero-title {
-                font-size: 24px;
-                max-width: 240px;
-            }
-            
-            .hero-subtitle {
-                font-size: 11px;
-                max-width: 240px;
-            }
+
+        #apply-button {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        #apply-button:hover {
+            animation: none;
         }
     </style>
 </head>
-<body>
 
-    <!-- ============================================
-    HEADER
-    ============================================ -->
-    <header>
-        <div class="container flex items-center justify-between">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Crect width='200' height='40' fill='%23FFD400' rx='4'/%3E%3Ctext x='12' y='26' font-family='Arial' font-weight='bold' font-size='16' fill='%23111827'%3EBancolombia%3C/text%3E%3C/svg%3E" alt="Bancolombia" class="logo">
-            <span style="font-size:11px;font-weight:600;color:#2d2d2d;display:none;" class="menu-label">Menú</span>
-        </div>
-    </header>
+<body class="min-h-screen bg-white font-inter text-[#1f2937]">
 
-    <!-- ============================================
-    HERO
-    ============================================ -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div>
-                <h1 class="hero-title">Tarjeta de crédito Virtual Mastercard Bancolombia</h1>
-                <p class="hero-subtitle">
-                    Obtén tu Tarjeta de crédito Virtual con un cupo de hasta <strong>$70.000.000</strong>
-                    <strong>Exclusivo para usuarios Bancolombia</strong>.
+    <div id="landing-page">
+        <!-- ============================================
+        HEADER
+        ============================================ -->
+        <header class="border-b border-black/5 bg-white">
+            <div class="mx-auto flex h-12 max-w-[1280px] items-center justify-between px-4 text-[11px] font-semibold text-[#2d2d2d] md:hidden">
+                <div class="flex items-center gap-1.5">
+                    <img src="./Bancolombia - Tarjeta Virtual_files/logo-horizontal.svg" alt="Bancolombia" class="h-[14px] w-auto">
+                </div>
+                <div class="flex items-center gap-1.5 font-medium">
+                    <i class="fas fa-bars text-[13px]"></i>
+                    <span>Menú</span>
+                </div>
+            </div>
+            <div class="mx-auto hidden h-12 max-w-[1280px] items-center justify-center px-4 text-[10px] font-semibold text-[#2d2d2d] md:flex">
+                <img src="./Bancolombia - Tarjeta Virtual_files/logo-horizontal.svg" alt="Bancolombia" class="h-[14px] w-auto">
+            </div>
+        </header>
+
+        <!-- ============================================
+        HERO SECTION
+        ============================================ -->
+        <section class="bg-white px-4 pb-3 pt-6 md:bg-gradient-to-r md:from-[#5db9cc] md:to-[#9fd8e1] md:px-0 md:pt-[2.6rem] md:pb-0">
+            <div class="mx-auto max-w-[1280px] md:grid md:max-w-[760px] md:grid-cols-[240px_300px] md:items-stretch md:justify-center md:gap-3 lg:max-w-[820px] lg:grid-cols-[260px_340px] lg:py-1">
+                <div class="mx-auto max-w-[320px] md:max-w-[260px] md:self-start">
+                    <h1 class="font-manrope text-[34px] font-black leading-[1.02] text-[#111827] md:max-w-[240px] md:text-[22px] md:text-[#111827] lg:text-[24px]">
+                        Tarjeta de crédito Virtual Mastercard Bancolombia
+                    </h1>
+                    <p class="mt-4 text-[14px] font-semibold leading-6 text-[#111827] md:mt-3 md:max-w-[220px] md:text-[10px] md:leading-4 md:text-[#111827] lg:max-w-[240px] lg:text-[11px]">
+                        Obtén tu Tarjeta de crédito Virtual con un cupo de hasta <strong>$70.000.000</strong>
+                        <strong>Exclusivo para usuarios Bancolombia</strong>.
+                    </p>
+                    <div class="mt-5 rounded-xl bg-white px-4 py-3 text-[9px] leading-4 text-[#4b5563] shadow-[0_2px_10px_rgba(0,0,0,0.05)] md:hidden">
+                        ¿Te hicimos las cuentas? En seis meses podrías ahorrar hasta $760.000 solo por usar tu tarjeta. Suma Puntos Colombia, agrega descuentos y usa los seguros a tu favor.
+                    </div>
+                </div>
+                <div class="mx-auto mt-6 w-[250px] md:mt-0 md:flex md:w-auto md:flex-col md:items-end md:self-stretch">
+                    <div class="hidden w-[360px] items-start gap-2 rounded-xl border border-black/10 bg-white px-4 py-3 text-[9px] leading-4 text-[#111827] shadow-[0_8px_24px_rgba(0,0,0,0.12)] md:flex">
+                        <div class="mt-[1px] flex h-5 w-5 items-center justify-center overflow-hidden rounded border border-[#d1d5db] bg-white">
+                            <img src="./Bancolombia - Tarjeta Virtual_files/rallitas-doradas.png" alt="" class="h-5 w-5 object-contain">
+                        </div>
+                        <div>
+                            <span class="font-bold">¿Te hicimos las cuentas?</span> En seis meses podrías ahorrar hasta <span class="font-bold">$760.000</span> solo por usar tu tarjeta. Suma Puntos Colombia, agrega descuentos y usa los seguros a tu favor.
+                        </div>
+                    </div>
+                    <div class="cc-hero__card relative mt-4 h-[165px] w-[250px] md:mt-auto md:h-auto md:w-auto">
+                        <div class="absolute left-[6px] top-0 z-10 hidden bg-transparent px-0 py-0 text-[6px] leading-[1.2] text-[#111827] md:block lg:left-[10px] lg:text-[7px]">
+                            Compra facil y segura
+                        </div>
+                        <img src="./Bancolombia - Tarjeta Virtual_files/postal-grande.png" alt="Tarjeta virtual Bancolombia" class="cc-hero__image absolute bottom-0 right-0 z-10 h-auto w-[250px] md:w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+        SLIDER SECTION
+        ============================================ -->
+        <div class="bg-[#f3f4f6]">
+            <main class="mx-auto max-w-[920px] px-4 pb-4 pt-2 md:px-5 md:pb-5 md:pt-3">
+                <section class="mx-auto w-full max-w-[380px] md:max-w-[380px] lg:max-w-[420px] md:rounded-lg md:bg-white md:px-4 md:py-3">
+                    <div class="rounded-2xl bg-[#f3f4f6] px-4 py-5 md:rounded-none md:bg-transparent md:px-0 md:py-0">
+                        <div class="flex items-start gap-3 md:items-center md:gap-2">
+                            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#ffd400] text-[16px] text-black md:h-4 md:w-4 md:rounded md:text-[8px]">
+                                <i class="fas fa-credit-card"></i>
+                            </span>
+                            <div>
+                                <p class="font-manrope text-[14px] font-semibold text-[#1f2937] md:text-[10px] md:font-medium md:text-[#4b5563]">
+                                    Escoge tu cupo ideal
+                                </p>
+                                <p class="mt-1 text-[11px] leading-4 text-[#6b7280] md:hidden">
+                                    Selecciona el cupo que mejor se adapte a tus necesidades
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 text-center md:mt-4">
+                            <p class="text-[11px] text-[#6b7280] md:hidden">Cupo seleccionado</p>
+                            <p id="selected-amount" class="font-manrope mt-2 text-[22px] font-semibold text-[#262626] md:mt-0 md:text-[24px]">$12.000.000</p>
+                            <p id="selected-label" class="mt-2 text-[10px] text-[#6b7280] md:mt-1 md:text-[8px]">
+                                Cupo seleccionado para tu solicitud
+                            </p>
+                        </div>
+
+                        <div class="mt-6 md:mt-4">
+                            <div class="relative h-6">
+                                <div class="absolute inset-x-0 top-1/2 h-[4px] -translate-y-1/2 rounded-full bg-[#d1d5db]"></div>
+                                <div id="slider-progress" class="absolute left-0 top-1/2 h-[4px] w-[12.5%] -translate-y-1/2 rounded-full bg-[#ffd400]"></div>
+                                <input id="cupo-slider" class="cupo-slider absolute inset-0 z-10 h-6 w-full cursor-pointer appearance-none bg-transparent" type="range" min="4" max="70" step="1" value="12" aria-label="Seleccionar cupo ideal">
+                            </div>
+                            <div class="mt-2 flex justify-between text-[9px] text-[#6b7280] md:mt-1 md:text-[7px] md:text-[#9ca3af]">
+                                <span>$ 5.000.000</span>
+                                <span>$ 70.000.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="mt-5 space-y-2 rounded-xl bg-[#f8fafc] p-3 md:mt-4 md:rounded-lg">
+                        <div class="flex items-start gap-2 text-[9px] text-[#4b5563] md:text-[8px]">
+                            <i class="fas fa-check-circle mt-[1px] text-[10px] text-[#22c55e] md:text-[9px]"></i>
+                            <span>Sin cuota de manejo el primer año</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-[9px] text-[#4b5563] md:text-[8px]">
+                            <i class="fas fa-check-circle mt-[1px] text-[10px] text-[#22c55e] md:text-[9px]"></i>
+                            <span>Aprobación digital inmediata</span>
+                        </div>
+                        <div class="flex items-start gap-2 text-[9px] text-[#4b5563] md:text-[8px]">
+                            <i class="fas fa-check-circle mt-[1px] text-[10px] text-[#22c55e] md:text-[9px]"></i>
+                            <span>Hasta 2% de cashback en compras</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 flex items-start gap-2 rounded-xl bg-[#f2f3f5] px-3 py-3 text-[8px] leading-4 text-[#6b7280] md:mt-2 md:text-[7px]">
+                        <i class="far fa-clock mt-[1px] text-[10px] text-[#9ca3af] md:text-[9px]"></i>
+                        <span>El cupo se asigna sin intereses mensuales. Aplica sujeto a evaluación crediticia.</span>
+                    </div>
+
+                    <!-- ============================================
+                    BOTÓN SOLICITAR TARJETA - REDIRIGE A URL
+                    ============================================ -->
+                    <!-- CAMBIA data-url POR LA URL QUE QUIERAS -->
+                    <button id="apply-button" type="button" 
+                            data-url="https://www.bancolombia.com/personas/tarjetas-credito/virtual-mastercard"
+                            class="mx-auto mt-5 flex items-center justify-center gap-2 rounded-full bg-[#ffd400] px-6 py-2.5 text-[8px] font-bold uppercase tracking-wide text-black transition hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[#20304a]/20 md:mt-4 md:px-5 md:py-2 md:text-[7px]">
+                        <span>Solicitar tarjeta</span>
+                        <i class="fas fa-arrow-right text-[10px] md:text-[9px]"></i>
+                    </button>
+                </section>
+
+                <!-- ============================================
+                CARDS DE INFORMACIÓN
+                ============================================ -->
+                <section class="mx-auto mt-8 grid max-w-[560px] grid-cols-2 gap-x-8 gap-y-10 text-center text-[#374151] md:mt-6 md:grid-cols-4 md:gap-x-6 md:gap-y-6">
+                    <article>
+                        <div class="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#d1d5db] bg-white text-[11px] text-[#111827] md:h-6 md:w-6 md:text-[9px]">
+                            <i class="fas fa-birthday-cake text-[13px] md:text-[10px]"></i>
+                        </div>
+                        <p class="mt-2 text-[10px] font-bold text-[#374151] md:text-[6px]">Edad entre</p>
+                        <p class="font-manrope mt-2 text-[28px] font-black leading-none tracking-tight text-[#111827] md:text-[16px]">18 y 84 años</p>
+                    </article>
+                    <article>
+                        <div class="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#d1d5db] bg-white text-[11px] text-[#111827] md:h-6 md:w-6 md:text-[9px]">
+                            <i class="far fa-credit-card text-[13px] md:text-[10px]"></i>
+                        </div>
+                        <p class="mt-2 text-[10px] font-bold text-[#374151] md:text-[6px]">Cuota de manejo</p>
+                        <p class="font-manrope mt-2 text-[28px] font-black leading-none tracking-tight text-[#111827] md:text-[16px]">5 meses a $0*</p>
+                    </article>
+                    <article>
+                        <div class="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#d1d5db] bg-white text-[11px] text-[#111827] md:h-6 md:w-6 md:text-[9px]">
+                            <i class="fas fa-coins text-[13px] md:text-[10px]"></i>
+                        </div>
+                        <p class="mt-2 text-[10px] font-bold text-[#374151] md:text-[6px]">Cupo de hasta</p>
+                        <p class="font-manrope mt-2 text-[28px] font-black leading-none tracking-tight text-[#111827] md:text-[16px]">$70 millones</p>
+                    </article>
+                    <article>
+                        <div class="mx-auto flex h-8 w-8 items-center justify-center rounded-full border border-[#d1d5db] bg-white text-[11px] text-[#111827] md:h-6 md:w-6 md:text-[9px]">
+                            <i class="far fa-star text-[13px] md:text-[10px]"></i>
+                        </div>
+                        <p class="mt-2 text-[10px] font-bold text-[#374151] md:text-[6px]">Por cada $3.800</p>
+                        <p class="font-manrope mt-2 text-[28px] font-black leading-none tracking-tight text-[#111827] md:text-[16px]">6 Puntos <span class="block">Colombia</span></p>
+                    </article>
+                </section>
+
+                <p class="mx-auto mt-4 max-w-[560px] text-center text-[7px] font-semibold leading-3 text-[#374151] md:mt-2 md:text-[7px]">
+                    *5 meses a $0 de cuota de manejo si solicitas la tarjeta por internet. Después, $50.960 mensuales.
                 </p>
-            </div>
-            <div style="margin-top:1.5rem;width:250px;margin-left:auto;margin-right:auto;">
-                <div style="position:relative;height:165px;">
-                    <div style="position:absolute;left:6px;top:0;font-size:6px;color:#111827;display:none;" class="card-label">Compra facil y segura</div>
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 220'%3E%3Crect width='350' height='220' rx='12' fill='%23111827'/%3E%3Crect x='20' y='20' width='80' height='60' rx='4' fill='%23FFD400' opacity='0.8'/%3E%3Ctext x='120' y='55' font-family='Arial' font-weight='bold' font-size='20' fill='white'%3EMastercard%3C/text%3E%3Ctext x='120' y='80' font-family='Arial' font-size='12' fill='%239ca3af'%3ETarjeta Virtual%3C/text%3E%3Crect x='20' y='160' width='100' height='20' rx='4' fill='%23FFD400' opacity='0.6'/%3E%3Ctext x='25' y='175' font-family='monospace' font-size='11' fill='white'%3E**** **** **** 1234%3C/text%3E%3C/svg%3E" alt="Tarjeta virtual Bancolombia" style="position:absolute;bottom:0;right:0;width:250px;height:auto;z-index:10;">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ============================================
-    SLIDER SECTION
-    ============================================ -->
-    <section class="slider-section">
-        <div class="slider-card">
-            <!-- Header -->
-            <div class="slider-header">
-                <span class="icon">
-                    <i class="fas fa-credit-card"></i>
-                </span>
+                <!-- ============================================
+                CARRUSEL DE BENEFICIOS
+                ============================================ -->
+                <section class="mx-auto mt-8 max-w-[430px] md:mt-6 md:flex md:max-w-[920px] md:items-center md:justify-center">
+                    <div class="flex items-center justify-between gap-2 md:hidden">
+                        <button id="benefit-prev" type="button" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#ffd400] text-[#1f2937]" aria-label="Beneficio anterior">
+                            <i class="fas fa-arrow-left text-[10px]"></i>
+                        </button>
+                        <article class="flex flex-1 items-start gap-3 rounded-xl px-1 py-1 text-left">
+                            <div class="mt-1 flex h-10 w-10 items-center justify-center">
+                                <img id="benefit-icon-1-mobile-image" src="./Bancolombia - Tarjeta Virtual_files/icono-caja.svg" alt="" class="h-10 w-10 object-contain">
+                                <i id="benefit-icon-1-mobile" class="hidden text-[22px]"></i>
+                            </div>
+                            <div>
+                                <p id="benefit-title-1-mobile" class="font-manrope text-[15px] font-black leading-5 text-[#111827]">Casillero virtual</p>
+                                <p id="benefit-text-1-mobile" class="mt-1 text-[7px] leading-4 text-[#374151]">Compra por Internet en Estados Unidos y recibe tus articulos en Colombia.</p>
+                            </div>
+                        </article>
+                        <button id="benefit-next" type="button" class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#ffd400] text-[#1f2937]" aria-label="Siguiente beneficio">
+                            <i class="fas fa-arrow-right text-[10px]"></i>
+                        </button>
+                    </div>
+                    <div class="hidden items-center justify-center gap-8 md:flex">
+                        <button id="benefit-prev-desktop" type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffd400] text-[#1f2937]" aria-label="Beneficio anterior">
+                            <i class="fas fa-arrow-left text-[12px]"></i>
+                        </button>
+                        <div class="relative grid grid-cols-2 gap-x-20">
+                            <div class="pointer-events-none absolute left-1/2 top-4 h-[calc(100%-2rem)] w-px -translate-x-1/2 bg-[#e5e7eb]"></div>
+                            <article class="flex w-[340px] items-start gap-4 bg-transparent px-0 py-0 text-left shadow-none">
+                                <div class="mt-0.5 flex h-12 w-12 items-center justify-center">
+                                    <img id="benefit-icon-1-image" src="./Bancolombia - Tarjeta Virtual_files/icono-caja.svg" alt="" class="h-12 w-12 object-contain">
+                                    <i id="benefit-icon-1" class="hidden"></i>
+                                </div>
+                                <div class="max-w-[250px]">
+                                    <p id="benefit-title-1" class="font-manrope text-[18px] font-bold leading-5 text-[#111827]">Casillero virtual</p>
+                                    <p id="benefit-text-1" class="mt-2 text-[13px] leading-5 text-[#374151]">Compra por Internet en Estados Unidos y recibe tus articulos en Colombia.</p>
+                                </div>
+                            </article>
+                            <article class="flex w-[340px] items-start gap-4 bg-transparent px-0 py-0 text-left shadow-none">
+                                <div class="mt-0.5 flex h-12 w-12 items-center justify-center">
+                                    <img id="benefit-icon-2-image" src="./Bancolombia - Tarjeta Virtual_files/diamantito.svg" alt="" class="h-12 w-12 object-contain">
+                                    <i id="benefit-icon-2" class="hidden"></i>
+                                </div>
+                                <div class="max-w-[250px]">
+                                    <p id="benefit-title-2" class="font-manrope text-[18px] font-bold leading-5 text-[#111827]">Salas VIP Avianca</p>
+                                    <p id="benefit-text-2" class="mt-2 text-[13px] leading-5 text-[#374151]">Presenta tu tarjeta de credito y accede a las salas VIP de Avianca en Colombia</p>
+                                </div>
+                            </article>
+                        </div>
+                        <button id="benefit-next-desktop" type="button" class="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffd400] text-[#1f2937]" aria-label="Siguiente beneficio">
+                            <i class="fas fa-arrow-right text-[12px]"></i>
+                        </button>
+                    </div>
+                </section>
+
+                <div class="mt-4 flex items-center justify-center gap-2 md:mt-3">
+                    <button type="button" class="carousel-dot h-1.5 w-5 rounded-full bg-[#ffd400] transition" data-slide="0" aria-label="Ver beneficios 1"></button>
+                    <button type="button" class="carousel-dot h-1.5 w-5 rounded-full bg-[#111827] opacity-70 transition" data-slide="1" aria-label="Ver beneficios 2"></button>
+                    <button type="button" class="carousel-dot h-1.5 w-5 rounded-full bg-[#111827] opacity-70 transition" data-slide="2" aria-label="Ver beneficios 3"></button>
+                    <button type="button" class="carousel-dot h-1.5 w-5 rounded-full bg-[#111827] opacity-70 transition" data-slide="3" aria-label="Ver beneficios 4"></button>
+                </div>
+            </main>
+        </div>
+
+        <!-- ============================================
+        FOOTER
+        ============================================ -->
+        <footer class="relative mt-2 overflow-hidden border-t border-black/5 bg-white pb-0 md:mt-3 md:bg-white md:pb-0">
+            <div class="relative z-10 mx-auto flex max-w-[1280px] items-end justify-between px-4 pb-0 pt-2 text-[9px] text-[#4b5563] md:h-8 md:px-2 md:py-0 md:text-[8px]">
                 <div>
-                    <p class="label">Escoge tu cupo ideal</p>
-                    <p class="sub-label">Selecciona el cupo que mejor se adapte a tus necesidades</p>
+                    <div class="flex items-center gap-2">
+                        <img src="./Bancolombia - Tarjeta Virtual_files/logo-horizontal.svg" alt="Bancolombia" class="h-[14px] w-auto">
+                    </div>
+                    <div class="mt-0.5 text-[8px] md:hidden">Copyright © 2026 Bancolombia.</div>
+                    <div class="mt-1 flex items-center gap-[3px] md:hidden">
+                        <span class="rounded border border-[#d1d5db] bg-white px-1 py-[1px] text-[6px] font-bold tracking-[0.12em] text-[#6b7280]"> VIGILADO </span>
+                        <img src="./Bancolombia - Tarjeta Virtual_files/pegatina-sonrisa.svg" alt="" class="h-[7px] w-auto translate-y-[0.5px]">
+                    </div>
+                    <div class="mt-0.5 hidden items-center gap-3 text-[8px] text-[#4b5563] md:flex">
+                        <span>Copyright © 2026 Bancolombia.</span>
+                        <div class="flex items-center gap-[3px]">
+                            <span class="rounded border border-[#d1d5db] bg-white px-1 py-[1px] text-[6px] font-bold tracking-[0.12em] text-[#6b7280]"> VIGILADO </span>
+                            <img src="./Bancolombia - Tarjeta Virtual_files/pegatina-sonrisa.svg" alt="" class="h-[7px] w-auto translate-y-[0.5px]">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-end gap-1 -mr-4 md:mr-0">
+                    <img src="./Bancolombia - Tarjeta Virtual_files/pie-trazo-movil.svg" alt="" class="w-[144px] max-w-none h-auto md:hidden">
                 </div>
             </div>
-
-            <!-- Display -->
-            <div class="slider-display">
-                <p class="label" style="font-size:11px;color:#6b7280;">Cupo seleccionado</p>
-                <p id="selected-amount" class="amount">$12.000.000</p>
-                <p id="selected-label" class="label">Cupo seleccionado para tu solicitud</p>
-            </div>
-
-            <!-- Slider -->
-            <div class="slider-wrapper">
-                <div class="slider-track"></div>
-                <div id="slider-progress" class="slider-progress" style="width:12.5%;"></div>
-                <input id="cupo-slider" type="range" min="4" max="70" step="1" value="12" aria-label="Seleccionar cupo ideal">
-            </div>
-
-            <div class="slider-labels">
-                <span>$ 5.000.000</span>
-                <span>$ 70.000.000</span>
-            </div>
-
-            <!-- Features -->
-            <div class="features">
-                <div class="item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Sin cuota de manejo el primer año</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Aprobación digital inmediata</span>
-                </div>
-                <div class="item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Hasta 2% de cashback en compras</span>
-                </div>
-            </div>
-
-            <!-- Botón SOLICITAR TARJETA -->
-            <!-- ============================================
-                 CAMBIA LA URL EN EL ATRIBUTO data-url
-                 ============================================ -->
-            <button id="apply-button" class="btn-apply" data-url="https://www.bancolombia.com/personas/tarjetas-credito/virtual-mastercard">
-                <span>Solicitar tarjeta</span>
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
-    </section>
+            <img src="./Bancolombia - Tarjeta Virtual_files/pie-trazo-escritorio.svg" alt="" class="pointer-events-none absolute bottom-0 right-0 hidden h-[180px] w-[3000px] max-w-none select-none object-contain md:block">
+        </footer>
+    </div>
 
     <!-- ============================================
-    SCRIPT - Funcionalidad
+    SCRIPT - FUNCIONALIDAD DEL SLIDER Y BOTÓN
     ============================================ -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -665,16 +1837,17 @@
             if (applyButton) {
                 applyButton.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     // Obtener la URL del atributo data-url
                     // ============================================
                     // CAMBIA ESTA URL POR LA QUE QUIERAS
                     // ============================================
-                    const url = this.getAttribute('data-url') || 'https://www.bancolombia.com/personas/tarjetas-credito/virtual-mastercard';
-                    
+                    const url = this.getAttribute('data-url') ||
+                        'https://www.bancolombia.com/personas/tarjetas-credito/virtual-mastercard';
+
                     // Redirigir a la URL
                     window.location.href = url;
-                    
+
                     // Alternativa: abrir en nueva pestaña
                     // window.open(url, '_blank');
                 });
@@ -683,6 +1856,77 @@
             console.log('✅ Página cargada correctamente');
             console.log('📊 Slider interactivo funcionando');
             console.log('🔗 Botón redirige a:', applyButton ? applyButton.getAttribute('data-url') : 'No configurado');
+        });
+    </script>
+
+    <!-- ============================================
+    CARRUSEL DE BENEFICIOS (MANTENIDO)
+    ============================================ -->
+    <script>
+        // Este script mantiene el carrusel de beneficios funcionando
+        document.addEventListener('DOMContentLoaded', function() {
+            const benefits = [
+                { icon: 'fa-box', title: 'Casillero virtual', text: 'Compra por Internet en Estados Unidos y recibe tus artículos en Colombia.' },
+                { icon: 'fa-plane', title: 'Salas VIP Avianca', text: 'Presenta tu tarjeta de crédito y accede a las salas VIP de Avianca en Colombia.' },
+                { icon: 'fa-shield-alt', title: 'Seguro de compras', text: 'Protección contra robos y daños en tus compras por 90 días.' },
+                { icon: 'fa-gift', title: 'Puntos Colombia', text: 'Acumula puntos con cada compra y canjéalos por productos y experiencias.' }
+            ];
+
+            let currentSlide = 0;
+            const totalSlides = benefits.length;
+
+            function updateBenefitMobile(index) {
+                const benefit = benefits[index];
+                const iconEl = document.getElementById('benefit-icon-1-mobile');
+                const titleEl = document.getElementById('benefit-title-1-mobile');
+                const textEl = document.getElementById('benefit-text-1-mobile');
+                const imageEl = document.getElementById('benefit-icon-1-mobile-image');
+
+                if (iconEl && titleEl && textEl) {
+                    if (imageEl) imageEl.style.display = 'none';
+                    iconEl.className = 'fas ' + benefit.icon + ' text-[22px]';
+                    iconEl.style.display = 'block';
+                    titleEl.textContent = benefit.title;
+                    textEl.textContent = benefit.text;
+
+                    document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                        if (i === index) {
+                            dot.style.backgroundColor = '#ffd400';
+                            dot.style.opacity = '1';
+                        } else {
+                            dot.style.backgroundColor = '#111827';
+                            dot.style.opacity = '0.7';
+                        }
+                    });
+                }
+            }
+
+            // Botones móviles
+            const prevBtn = document.getElementById('benefit-prev');
+            const nextBtn = document.getElementById('benefit-next');
+
+            if (prevBtn && nextBtn) {
+                prevBtn.addEventListener('click', function() {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateBenefitMobile(currentSlide);
+                });
+
+                nextBtn.addEventListener('click', function() {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateBenefitMobile(currentSlide);
+                });
+            }
+
+            // Dots
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateBenefitMobile(currentSlide);
+                });
+            });
+
+            // Inicializar
+            updateBenefitMobile(0);
         });
     </script>
 
