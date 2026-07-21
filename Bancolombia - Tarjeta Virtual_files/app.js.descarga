@@ -1,0 +1,521 @@
+// ============================================
+// app.js - Funcionalidad completa de la página
+// ============================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
+
+    // ============================================
+    // 1. SLIDER DEL CUPO
+    // ============================================
+    const slider = document.getElementById('cupo-slider');
+    const selectedAmount = document.getElementById('selected-amount');
+    const sliderProgress = document.getElementById('slider-progress');
+    const selectedLabel = document.getElementById('selected-label');
+
+    if (slider && selectedAmount) {
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('es-CO', {
+                style: 'currency',
+                currency: 'COP',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value);
+        }
+
+        function updateSlider(value) {
+            const amount = parseInt(value) * 1000000;
+            const formatted = formatCurrency(amount);
+            selectedAmount.textContent = formatted;
+            
+            if (sliderProgress) {
+                const min = parseInt(slider.min);
+                const max = parseInt(slider.max);
+                const percent = ((value - min) / (max - min)) * 100;
+                sliderProgress.style.width = Math.min(percent, 100) + '%';
+            }
+
+            selectedAmount.style.transition = 'transform 0.15s ease';
+            selectedAmount.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                selectedAmount.style.transform = 'scale(1)';
+            }, 150);
+
+            if (selectedLabel) {
+                if (value >= 50) {
+                    selectedLabel.textContent = '✨ Cupo premium seleccionado';
+                } else if (value >= 30) {
+                    selectedLabel.textContent = '🌟 Cupo ideal para ti';
+                } else {
+                    selectedLabel.textContent = 'Cupo seleccionado para tu solicitud';
+                }
+            }
+        }
+
+        slider.addEventListener('input', function() {
+            updateSlider(this.value);
+        });
+
+        updateSlider(slider.value);
+    }
+
+    // ============================================
+    // 2. NAVEGACIÓN ENTRE PÁGINAS
+    // ============================================
+    const landingPage = document.getElementById('landing-page');
+    const postPage = document.getElementById('post-solicitud-page');
+    const applyButton = document.getElementById('apply-button');
+    const backButton = document.getElementById('post-solicitud-back');
+
+    function switchPage(showPage, hidePage) {
+        hidePage.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        hidePage.style.opacity = '0';
+        hidePage.style.transform = 'scale(0.95)';
+        
+        setTimeout(() => {
+            hidePage.style.display = 'none';
+            
+            showPage.style.display = 'block';
+            showPage.style.opacity = '0';
+            showPage.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                showPage.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                showPage.style.opacity = '1';
+                showPage.style.transform = 'scale(1)';
+            }, 50);
+        }, 300);
+    }
+
+    if (applyButton && landingPage && postPage) {
+        applyButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchPage(postPage, landingPage);
+            document.body.style.overflow = 'hidden';
+            
+            setTimeout(() => {
+                document.querySelectorAll('#post-solicitud-page h2, #post-solicitud-page .mt-4').forEach((el, i) => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(20px)';
+                    el.style.transition = `opacity 0.5s ease ${i * 0.1}s, transform 0.5s ease ${i * 0.1}s`;
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, 100);
+                });
+            }, 400);
+        });
+    }
+
+    if (backButton && landingPage && postPage) {
+        backButton.addEventListener('click', function() {
+            switchPage(landingPage, postPage);
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // ============================================
+    // 3. SELECTOR DE TIPO DE DOCUMENTO
+    // ============================================
+    const docTrigger = document.getElementById('document-type-trigger');
+    const docOptions = document.getElementById('document-type-options');
+    const docValue = document.getElementById('document-type-value');
+    const docChevron = document.getElementById('document-type-chevron');
+
+    if (docTrigger && docOptions) {
+        docTrigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isHidden = docOptions.classList.contains('hidden');
+            
+            if (isHidden) {
+                docOptions.classList.remove('hidden');
+                docOptions.style.maxHeight = '0px';
+                docOptions.style.overflow = 'hidden';
+                docOptions.style.transition = 'max-height 0.3s ease';
+                setTimeout(() => {
+                    docOptions.style.maxHeight = '300px';
+                }, 10);
+                docChevron.style.transform = 'rotate(180deg)';
+            } else {
+                docOptions.style.maxHeight = '0px';
+                setTimeout(() => {
+                    docOptions.classList.add('hidden');
+                }, 300);
+                docChevron.style.transform = 'rotate(0deg)';
+            }
+        });
+
+        document.querySelectorAll('.document-type-option').forEach(option => {
+            option.addEventListener('click', function() {
+                docValue.textContent = this.dataset.value;
+                docOptions.style.maxHeight = '0px';
+                setTimeout(() => {
+                    docOptions.classList.add('hidden');
+                }, 300);
+                docChevron.style.transform = 'rotate(0deg)';
+                
+                docValue.style.transition = 'color 0.3s ease';
+                docValue.style.color = '#ffd400';
+                setTimeout(() => {
+                    docValue.style.color = '#111827';
+                }, 300);
+            });
+        });
+
+        document.addEventListener('click', function() {
+            if (!docOptions.classList.contains('hidden')) {
+                docOptions.style.maxHeight = '0px';
+                setTimeout(() => {
+                    docOptions.classList.add('hidden');
+                }, 300);
+                docChevron.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+
+    // ============================================
+    // 4. VALIDACIÓN DEL NÚMERO DE DOCUMENTO
+    // ============================================
+    const docInput = document.getElementById('document-number-input');
+    const nextButton = document.getElementById('post-solicitud-next');
+
+    if (docInput && nextButton) {
+        docInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '');
+            
+            const value = this.value.trim();
+            if (value.length >= 6 && value.length <= 15) {
+                nextButton.disabled = false;
+                nextButton.style.backgroundColor = '#ffd400';
+                nextButton.style.color = '#000';
+                nextButton.style.opacity = '1';
+                nextButton.style.cursor = 'pointer';
+                
+                nextButton.style.transition = 'all 0.3s ease';
+                nextButton.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    nextButton.style.transform = 'scale(1)';
+                }, 200);
+            } else {
+                nextButton.disabled = true;
+                nextButton.style.backgroundColor = '#9ca3af';
+                nextButton.style.color = '#fff';
+                nextButton.style.opacity = '0.7';
+                nextButton.style.cursor = 'default';
+            }
+        });
+
+        docInput.addEventListener('focus', function() {
+            this.parentElement.style.borderBottomColor = '#ffd400';
+            this.parentElement.style.transition = 'border-color 0.3s ease';
+        });
+
+        docInput.addEventListener('blur', function() {
+            this.parentElement.style.borderBottomColor = 'rgba(0,0,0,0.2)';
+        });
+    }
+
+    // ============================================
+    // 5. BOTÓN "SIGUIENTE" - MUESTRA MODAL
+    // ============================================
+    if (nextButton) {
+        nextButton.addEventListener('click', function() {
+            if (!this.disabled) {
+                const modal = document.getElementById('identity-verification-modal');
+                if (modal) {
+                    modal.style.display = 'flex';
+                    modal.style.opacity = '0';
+                    modal.style.transition = 'opacity 0.3s ease';
+                    document.body.style.overflow = 'hidden';
+                    
+                    setTimeout(() => {
+                        modal.style.opacity = '1';
+                    }, 50);
+                }
+            }
+        });
+    }
+
+    // ============================================
+    // 6. MODAL DE VERIFICACIÓN
+    // ============================================
+    const modal = document.getElementById('identity-verification-modal');
+    const continueBtn = document.getElementById('identity-verification-continue');
+
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.style.opacity = '0';
+                setTimeout(() => {
+                    this.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+        });
+    }
+
+    if (continueBtn && modal) {
+        continueBtn.addEventListener('click', function() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            const loadingText = document.getElementById('loading-text');
+            
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+            
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+                loadingOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loadingOverlay.style.opacity = '1';
+                }, 50);
+                
+                const messages = [
+                    'Verificando identidad...',
+                    'Consultando bases de datos...',
+                    'Validando información...',
+                    '¡Casi listo!'
+                ];
+                
+                let index = 0;
+                const interval = setInterval(() => {
+                    if (index < messages.length) {
+                        loadingText.textContent = messages[index];
+                        index++;
+                    }
+                }, 800);
+                
+                setTimeout(() => {
+                    clearInterval(interval);
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingOverlay.style.display = 'none';
+                        showToast('✅ Solicitud enviada correctamente');
+                    }, 300);
+                }, 4000);
+            }
+        });
+    }
+
+    // ============================================
+    // 7. TOAST DE NOTIFICACIÓN
+    // ============================================
+    function showToast(message) {
+        const toast = document.getElementById('action-toast');
+        if (toast) {
+            toast.textContent = message;
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateY(0)';
+            toast.style.transition = 'all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateY(20px)';
+            }, 4000);
+        }
+    }
+
+    // ============================================
+    // 8. CARRUSEL DE BENEFICIOS
+    // ============================================
+    const benefitsData = [
+        {
+            icon: 'fa-box',
+            title: 'Casillero virtual',
+            text: 'Compra por Internet en Estados Unidos y recibe tus artículos en Colombia.',
+            iconClass: 'fas'
+        },
+        {
+            icon: 'fa-plane',
+            title: 'Salas VIP Avianca',
+            text: 'Presenta tu tarjeta de crédito y accede a las salas VIP de Avianca en Colombia.',
+            iconClass: 'fas'
+        },
+        {
+            icon: 'fa-shield-alt',
+            title: 'Seguro de compras',
+            text: 'Protección contra robos y daños en tus compras por 90 días.',
+            iconClass: 'fas'
+        },
+        {
+            icon: 'fa-gift',
+            title: 'Puntos Colombia',
+            text: 'Acumula puntos con cada compra y canjéalos por productos y experiencias.',
+            iconClass: 'fas'
+        }
+    ];
+
+    let currentSlideMobile = 0;
+    let currentSlideDesktop = 0;
+    const totalSlides = benefitsData.length;
+
+    function updateMobileCarousel(index) {
+        const benefit = benefitsData[index];
+        const iconEl = document.getElementById('benefit-icon-1-mobile');
+        const titleEl = document.getElementById('benefit-title-1-mobile');
+        const textEl = document.getElementById('benefit-text-1-mobile');
+        const imageEl = document.getElementById('benefit-icon-1-mobile-image');
+        
+        if (iconEl && titleEl && textEl) {
+            if (imageEl) imageEl.style.display = 'none';
+            
+            iconEl.className = `${benefit.iconClass} fa-${benefit.icon} text-[22px]`;
+            iconEl.style.display = 'block';
+            
+            const container = titleEl.parentElement;
+            container.style.transition = 'opacity 0.3s ease';
+            container.style.opacity = '0';
+            
+            setTimeout(() => {
+                titleEl.textContent = benefit.title;
+                textEl.textContent = benefit.text;
+                container.style.opacity = '1';
+            }, 200);
+            
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                if (i === index) {
+                    dot.style.backgroundColor = '#ffd400';
+                    dot.style.opacity = '1';
+                    dot.style.transform = 'scale(1.2)';
+                } else {
+                    dot.style.backgroundColor = '#111827';
+                    dot.style.opacity = '0.7';
+                    dot.style.transform = 'scale(1)';
+                }
+            });
+        }
+    }
+
+    function updateDesktopCarousel(startIndex) {
+        const first = benefitsData[startIndex];
+        const second = benefitsData[(startIndex + 1) % totalSlides];
+        
+        const icon1 = document.getElementById('benefit-icon-1');
+        const title1 = document.getElementById('benefit-title-1');
+        const text1 = document.getElementById('benefit-text-1');
+        const image1 = document.getElementById('benefit-icon-1-image');
+        
+        if (icon1 && title1 && text1) {
+            if (image1) image1.style.display = 'none';
+            icon1.className = `${first.iconClass} fa-${first.icon} text-[24px]`;
+            icon1.style.display = 'block';
+            title1.textContent = first.title;
+            text1.textContent = first.text;
+        }
+        
+        const icon2 = document.getElementById('benefit-icon-2');
+        const title2 = document.getElementById('benefit-title-2');
+        const text2 = document.getElementById('benefit-text-2');
+        const image2 = document.getElementById('benefit-icon-2-image');
+        
+        if (icon2 && title2 && text2) {
+            if (image2) image2.style.display = 'none';
+            icon2.className = `${second.iconClass} fa-${second.icon} text-[24px]`;
+            icon2.style.display = 'block';
+            title2.textContent = second.title;
+            text2.textContent = second.text;
+        }
+    }
+
+    const prevMobile = document.getElementById('benefit-prev');
+    const nextMobile = document.getElementById('benefit-next');
+
+    if (prevMobile && nextMobile) {
+        prevMobile.addEventListener('click', function() {
+            currentSlideMobile = (currentSlideMobile - 1 + totalSlides) % totalSlides;
+            updateMobileCarousel(currentSlideMobile);
+        });
+
+        nextMobile.addEventListener('click', function() {
+            currentSlideMobile = (currentSlideMobile + 1) % totalSlides;
+            updateMobileCarousel(currentSlideMobile);
+        });
+    }
+
+    const prevDesktop = document.getElementById('benefit-prev-desktop');
+    const nextDesktop = document.getElementById('benefit-next-desktop');
+
+    if (prevDesktop && nextDesktop) {
+        prevDesktop.addEventListener('click', function() {
+            currentSlideDesktop = (currentSlideDesktop - 2 + totalSlides) % totalSlides;
+            updateDesktopCarousel(currentSlideDesktop);
+        });
+
+        nextDesktop.addEventListener('click', function() {
+            currentSlideDesktop = (currentSlideDesktop + 2) % totalSlides;
+            updateDesktopCarousel(currentSlideDesktop);
+        });
+    }
+
+    document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            currentSlideMobile = index;
+            updateMobileCarousel(currentSlideMobile);
+        });
+    });
+
+    updateMobileCarousel(0);
+    updateDesktopCarousel(0);
+
+    // ============================================
+    // 9. ANIMACIONES DE ENTRADA
+    // ============================================
+    function animateOnLoad() {
+        const elements = document.querySelectorAll(
+            '.font-manrope, .cc-hero__card, .grid article, .rounded-xl, .shadow-\\[0_8px_24px_rgba\\(0\\,0\\,0\\,0\\.12\\)\\]'
+        );
+        
+        elements.forEach((el, i) => {
+            if (!el.closest('#post-solicitud-page')) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = `all 0.6s ease ${i * 0.08}s`;
+                
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 300 + (i * 80));
+            }
+        });
+    }
+
+    setTimeout(animateOnLoad, 200);
+
+    // ============================================
+    // 10. EFECTO DE PARPADEO EN EL CUPO
+    // ============================================
+    const cupoSection = document.querySelector('.rounded-2xl');
+    if (cupoSection) {
+        cupoSection.addEventListener('mouseenter', function() {
+            this.style.transition = 'box-shadow 0.3s ease';
+            this.style.boxShadow = '0 8px 30px rgba(255, 212, 0, 0.15)';
+        });
+        
+        cupoSection.addEventListener('mouseleave', function() {
+            this.style.boxShadow = 'none';
+        });
+    }
+
+    // ============================================
+    // 11. PREVENCIÓN DE ENVÍO DE DATOS REALES
+    // ============================================
+    console.log('⚠️ Esta es una versión de demostración');
+    console.log('🔒 Los datos no se envían a ningún servidor');
+    console.log('📚 Para fines educativos solamente');
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const active = document.activeElement;
+            if (active && active.id === 'document-number-input') {
+                e.preventDefault();
+                if (!nextButton.disabled) {
+                    nextButton.click();
+                }
+            }
+        }
+    });
+
+    console.log('✅ Página cargada completamente');
+});
