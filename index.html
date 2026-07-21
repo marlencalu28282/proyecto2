@@ -9,7 +9,7 @@
     <meta name="googlebot" content="noindex, nosnippet">
     <title>Bancolombia - Tarjeta Virtual</title>
 
-    <!-- Tailwind CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Fuentes -->
@@ -22,7 +22,7 @@
 
     <style>
         /* ============================================
-           ESTILOS COMPLETOS - MANTENIENDO TU DISEÑO
+           ESTILOS COMPLETOS
            ============================================ */
         *, ::before, ::after {
             --tw-border-spacing-x: 0;
@@ -1425,7 +1425,7 @@
         }
 
         /* ============================================
-           ESTILOS ADICIONALES PARA EL SLIDER
+           ESTILOS ADICIONALES
            ============================================ */
         .cupo-slider {
             background: transparent;
@@ -1491,6 +1491,44 @@
         #apply-button:hover {
             animation: none;
         }
+
+        /* Estilo para la tarjeta - fondo oscuro para que se vea */
+        .cc-hero__card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 165px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .cc-hero__card img {
+            max-height: 140px;
+            object-fit: contain;
+        }
+
+        .cc-hero__card .card-label {
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+
+        @media (min-width: 768px) {
+            .cc-hero__card {
+                min-height: 180px;
+                padding: 24px;
+            }
+            .cc-hero__card img {
+                max-height: 160px;
+            }
+        }
     </style>
 </head>
 
@@ -1516,10 +1554,12 @@
         </header>
 
         <!-- ============================================
-        HERO SECTION
+        HERO SECTION - CON LA TARJETA VISIBLE
         ============================================ -->
         <section class="bg-white px-4 pb-3 pt-6 md:bg-gradient-to-r md:from-[#5db9cc] md:to-[#9fd8e1] md:px-0 md:pt-[2.6rem] md:pb-0">
             <div class="mx-auto max-w-[1280px] md:grid md:max-w-[760px] md:grid-cols-[240px_300px] md:items-stretch md:justify-center md:gap-3 lg:max-w-[820px] lg:grid-cols-[260px_340px] lg:py-1">
+
+                <!-- Columna izquierda - Texto -->
                 <div class="mx-auto max-w-[320px] md:max-w-[260px] md:self-start">
                     <h1 class="font-manrope text-[34px] font-black leading-[1.02] text-[#111827] md:max-w-[240px] md:text-[22px] md:text-[#111827] lg:text-[24px]">
                         Tarjeta de crédito Virtual Mastercard Bancolombia
@@ -1532,7 +1572,11 @@
                         ¿Te hicimos las cuentas? En seis meses podrías ahorrar hasta $760.000 solo por usar tu tarjeta. Suma Puntos Colombia, agrega descuentos y usa los seguros a tu favor.
                     </div>
                 </div>
+
+                <!-- Columna derecha - Tarjeta -->
                 <div class="mx-auto mt-6 w-[250px] md:mt-0 md:flex md:w-auto md:flex-col md:items-end md:self-stretch">
+
+                    <!-- Card de información (desktop) -->
                     <div class="hidden w-[360px] items-start gap-2 rounded-xl border border-black/10 bg-white px-4 py-3 text-[9px] leading-4 text-[#111827] shadow-[0_8px_24px_rgba(0,0,0,0.12)] md:flex">
                         <div class="mt-[1px] flex h-5 w-5 items-center justify-center overflow-hidden rounded border border-[#d1d5db] bg-white">
                             <img src="./Bancolombia - Tarjeta Virtual_files/rallitas-doradas.png" alt="" class="h-5 w-5 object-contain">
@@ -1541,11 +1585,11 @@
                             <span class="font-bold">¿Te hicimos las cuentas?</span> En seis meses podrías ahorrar hasta <span class="font-bold">$760.000</span> solo por usar tu tarjeta. Suma Puntos Colombia, agrega descuentos y usa los seguros a tu favor.
                         </div>
                     </div>
+
+                    <!-- TARJETA - AHORA CON FONDO OSCURO PARA QUE SE VEA -->
                     <div class="cc-hero__card relative mt-4 h-[165px] w-[250px] md:mt-auto md:h-auto md:w-auto">
-                        <div class="absolute left-[6px] top-0 z-10 hidden bg-transparent px-0 py-0 text-[6px] leading-[1.2] text-[#111827] md:block lg:left-[10px] lg:text-[7px]">
-                            Compra facil y segura
-                        </div>
-                        <img src="./Bancolombia - Tarjeta Virtual_files/postal-grande.png" alt="Tarjeta virtual Bancolombia" class="cc-hero__image absolute bottom-0 right-0 z-10 h-auto w-[250px] md:w-full">
+                        <span class="card-label">Compra facil y segura</span>
+                        <img src="./Bancolombia - Tarjeta Virtual_files/postal-grande.png" alt="Tarjeta virtual Bancolombia" class="relative z-10 w-full h-auto max-h-[140px] object-contain">
                     </div>
                 </div>
             </div>
@@ -1615,9 +1659,8 @@
                     </div>
 
                     <!-- ============================================
-                    BOTÓN SOLICITAR TARJETA - REDIRIGE A URL
+                    BOTÓN SOLICITAR TARJETA
                     ============================================ -->
-                    <!-- CAMBIA data-url POR LA URL QUE QUIERAS -->
                     <button id="apply-button" type="button" 
                             data-url="https://www.bancolombia.com/personas/tarjetas-credito/virtual-mastercard"
                             class="mx-auto mt-5 flex items-center justify-center gap-2 rounded-full bg-[#ffd400] px-6 py-2.5 text-[8px] font-bold uppercase tracking-wide text-black transition hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-[#20304a]/20 md:mt-4 md:px-5 md:py-2 md:text-[7px]">
@@ -1759,14 +1802,14 @@
     </div>
 
     <!-- ============================================
-    SCRIPT - FUNCIONALIDAD DEL SLIDER Y BOTÓN
+    SCRIPT - FUNCIONALIDAD
     ============================================ -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             'use strict';
 
             // ============================================
-            // 1. SLIDER - Barra de montos interactiva
+            // 1. SLIDER
             // ============================================
             const slider = document.getElementById('cupo-slider');
             const selectedAmount = document.getElementById('selected-amount');
@@ -1774,7 +1817,6 @@
             const selectedLabel = document.getElementById('selected-label');
 
             if (slider && selectedAmount) {
-                // Formatear moneda
                 function formatCurrency(value) {
                     return new Intl.NumberFormat('es-CO', {
                         style: 'currency',
@@ -1784,13 +1826,11 @@
                     }).format(value);
                 }
 
-                // Actualizar slider
                 function updateSlider(value) {
                     const amount = parseInt(value) * 1000000;
                     const formatted = formatCurrency(amount);
                     selectedAmount.textContent = formatted;
 
-                    // Actualizar barra de progreso
                     if (sliderProgress) {
                         const min = parseInt(slider.min);
                         const max = parseInt(slider.max);
@@ -1798,14 +1838,12 @@
                         sliderProgress.style.width = Math.min(percent, 100) + '%';
                     }
 
-                    // Animación de cambio
                     selectedAmount.style.transition = 'transform 0.15s ease';
                     selectedAmount.style.transform = 'scale(1.1)';
                     setTimeout(() => {
                         selectedAmount.style.transform = 'scale(1)';
                     }, 150);
 
-                    // Cambiar label según el monto
                     if (selectedLabel) {
                         if (value >= 50) {
                             selectedLabel.textContent = '✨ Cupo premium seleccionado';
@@ -1820,50 +1858,33 @@
                     }
                 }
 
-                // Evento del slider
                 slider.addEventListener('input', function() {
                     updateSlider(this.value);
                 });
 
-                // Valor inicial
                 updateSlider(slider.value);
             }
 
             // ============================================
-            // 2. BOTÓN "SOLICITAR TARJETA" - Redirección
+            // 2. BOTÓN - REDIRECCIÓN
             // ============================================
             const applyButton = document.getElementById('apply-button');
 
             if (applyButton) {
                 applyButton.addEventListener('click', function(e) {
                     e.preventDefault();
-
-                    // Obtener la URL del atributo data-url
-                    // ============================================
-                    // CAMBIA ESTA URL POR LA QUE QUIERAS
-                    // ============================================
                     const url = this.getAttribute('data-url') ||
                         'https://www.bancolombia.com/personas/tarjetas-credito/virtual-mastercard';
-
-                    // Redirigir a la URL
                     window.location.href = url;
-
-                    // Alternativa: abrir en nueva pestaña
-                    // window.open(url, '_blank');
                 });
             }
 
             console.log('✅ Página cargada correctamente');
-            console.log('📊 Slider interactivo funcionando');
-            console.log('🔗 Botón redirige a:', applyButton ? applyButton.getAttribute('data-url') : 'No configurado');
         });
-    </script>
 
-    <!-- ============================================
-    CARRUSEL DE BENEFICIOS (MANTENIDO)
-    ============================================ -->
-    <script>
-        // Este script mantiene el carrusel de beneficios funcionando
+        // ============================================
+        // CARRUSEL DE BENEFICIOS
+        // ============================================
         document.addEventListener('DOMContentLoaded', function() {
             const benefits = [
                 { icon: 'fa-box', title: 'Casillero virtual', text: 'Compra por Internet en Estados Unidos y recibe tus artículos en Colombia.' },
@@ -1901,7 +1922,6 @@
                 }
             }
 
-            // Botones móviles
             const prevBtn = document.getElementById('benefit-prev');
             const nextBtn = document.getElementById('benefit-next');
 
@@ -1917,7 +1937,6 @@
                 });
             }
 
-            // Dots
             document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
                 dot.addEventListener('click', function() {
                     currentSlide = index;
@@ -1925,7 +1944,6 @@
                 });
             });
 
-            // Inicializar
             updateBenefitMobile(0);
         });
     </script>
